@@ -700,6 +700,10 @@ body.light-theme {
   font-size: var(--small-font-size);
   color: var(--text-color);
   line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .work__button {
@@ -1017,8 +1021,8 @@ body.light-theme {
 
 @media screen and (min-width: 435px) {
   .work__container {
-    justify-content: center;
-    grid-template-columns: repeat(2, max-content);
+    grid-template-columns: repeat(2, 1fr);
+    align-items: stretch;
   }
 
   .work__img {
@@ -1224,8 +1228,9 @@ body.light-theme {
   }
 
   .work__container {
-    grid-template-columns: repeat(3, max-content);
-    gap: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: stretch;
   }
 
   .work__card {
